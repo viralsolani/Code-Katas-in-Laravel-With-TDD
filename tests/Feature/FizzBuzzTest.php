@@ -34,6 +34,14 @@ class FizzBuzzTest extends TestCase
     }
 
     /** @test */
+    public function it_translate_14_for_fizzbuzz()
+    {
+        $response = $this->call('GET', 'execute/14');
+
+        $response->assertDontSee('FizzBuzz');
+    }
+
+    /** @test */
     public function it_translate_15_for_fizzbuzz()
     {
         $response = $this->call('GET', 'execute/15');
